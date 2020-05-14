@@ -1,5 +1,5 @@
 <a href="https://blog.logesht.dev" target="_blank">
-<img src="https://logesht.dev/img/blog_img.png" alt="Logesh Thulasiraman Writes!" />
+<img src="https://logesht.dev/img/blog_image.png" alt="Logesh Thulasiraman Writes!" />
 </a>
 
 <br/>
