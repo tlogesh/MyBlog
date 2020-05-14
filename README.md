@@ -43,4 +43,16 @@ yarn proxy
 ## Configuring Netlify CMS
 You can follow this https://www.netlifycms.org/docs/gatsby/ integration document to setup Netlify CMS. The major task here is to create authrization token from your repository manager and add it to your config.yml
 
+### Contributing to this Blog
+1) Log in into your https://blog.logesht.dev/admin/ using your github account.
+2) The things should be pretty straight forward once you enter the dashboard.
+3) Get added yourself as a author.
+4) Start Writting your digests and Publish them.
+
+Happy Writting!!
+
+### Netlify Status (Deployment Status):
+[![Netlify Status](https://api.netlify.com/api/v1/badges/cdfbc44e-9173-4b18-8e21-4ee680bc089c/deploy-status)](https://app.netlify.com/sites/blog-logesh/deploys)
+
+
 
