@@ -32,7 +32,7 @@ yarn dev
 yarn build
 ```
 
-### Netlify CMS integration
+## Netlify CMS integration
 This blog feature netlify CMS integration for editing and managing your blog posts. If wanting to use Netlify CMS as the content editor, then you need to be run the proxy in another terminal tab. Then visit
 http://localhost:8000/admin to view the editor.
 ```sh
@@ -43,7 +43,7 @@ yarn proxy
 ## Configuring Netlify CMS
 You can follow this https://www.netlifycms.org/docs/gatsby/ integration document to setup Netlify CMS. The major task here is to create authrization token from your repository manager and add it to your config.yml
 
-### Contributing to this Blog
+## Contributing to this Blog
 1) Log in into your https://blog.logesht.dev/admin/ using your github account. You may need to Fork this repo if prompted.
 2) The things should be pretty straight forward once you enter the dashboard.
 3) Get added yourself as a author.
@@ -51,7 +51,7 @@ You can follow this https://www.netlifycms.org/docs/gatsby/ integration document
 
 Happy Writting!!
 
-### Netlify Status (Deployment Status):
+## Netlify Status (Deployment Status):
 [![Netlify Status](https://api.netlify.com/api/v1/badges/cdfbc44e-9173-4b18-8e21-4ee680bc089c/deploy-status)](https://app.netlify.com/sites/blog-logesh/deploys)
 
 
