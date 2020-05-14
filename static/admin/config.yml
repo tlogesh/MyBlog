@@ -1,8 +1,8 @@
 backend: # Set up your backend
   name: github
   repo: tlogesh/MyBlog
-  auth_type: implicit
-  app_id: 2NGshfbYDPcjsKCKGR
+  open_authoring: true
+  publish_mode: editorial_workflow
 
 local_backend: true # Optional if you want to use the local proxy mode
 
