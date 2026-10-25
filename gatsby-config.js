@@ -1,57 +1,65 @@
+const siteUrl = 'https://blog.logesht.dev';
+
 module.exports = {
   siteMetadata: {
-    title: `Logesh Thulasiraman Writes!`,
-    name: `Logesh Thulasiraman Writes!`,
-    siteUrl: `https://blog.logesht.dev`,
-    description: `A Personal Blog or Tech Digests by Logesh Thulasiraman!`,
-    hero: {
-      heading: `Tech Digests By Logesh Thulasiraman!`,
-      maxWidth: 550,
-    },
-    social: [
-      {
-        name: `github`,
-        url: `https://github.com/tlogesh`,
-      },
-      {
-        name: `instagram`,
-        url: `https://www.instagram.com/logesht/`,
-      },
-      {
-        name: `linkedin`,
-        url: `https://www.linkedin.com/in/logesh-thulasiraman-b1527aa2/`,
-      },
-    ],
+    title: 'Logesh Thulasiraman Writes',
+    description: 'Notes on full-stack engineering, APIs and AI by Logesh Thulasiraman.',
+    author: 'Logesh Thulasiraman',
+    siteUrl,
+    portfolioUrl: 'https://logesht.dev',
   },
   plugins: [
     {
-      resolve: "@narative/gatsby-theme-novela",
+      resolve: 'gatsby-source-filesystem',
+      options: { name: 'posts', path: `${__dirname}/content/posts` },
+    },
+    {
+      resolve: 'gatsby-transformer-remark',
       options: {
-        contentPosts: "content/posts",
-        contentAuthors: "content/authors",
-        basePath: "/",
-        authorsPage: true,
-        sources: {
-          local: true,
-          // contentful: true,
-        },
+        plugins: [
+          'gatsby-remark-copy-linked-files',
+          {
+            resolve: 'gatsby-remark-prismjs',
+            options: { noInlineHighlight: true },
+          },
+        ],
       },
     },
     {
-      resolve: `gatsby-plugin-manifest`,
-      options: {
-        name: `Novela by Narative`,
-        short_name: `Novela`,
-        start_url: `/`,
-        background_color: `#fff`,
-        theme_color: `#fff`,
-        display: `standalone`,
-        icon: `src/assets/favicon.png`,
-      },
+      resolve: 'gatsby-plugin-sitemap',
+      options: { excludes: ['/404/', '/404.html'] },
     },
     {
-      resolve: `gatsby-plugin-netlify-cms`,
+      resolve: 'gatsby-plugin-feed',
       options: {
+        feeds: [
+          {
+            title: 'Logesh Thulasiraman Writes',
+            output: '/feed.xml',
+            query: `{
+              allMarkdownRemark(
+                filter: { frontmatter: { draft: { ne: true } } }
+                sort: { frontmatter: { date: DESC } }
+              ) {
+                nodes {
+                  excerpt
+                  html
+                  fields { slug }
+                  frontmatter { title date description }
+                }
+              }
+            }`,
+            serialize: ({ query: { site, allMarkdownRemark } }) =>
+              allMarkdownRemark.nodes.map((node) => ({
+                title: node.frontmatter.title,
+                description: node.frontmatter.description || node.excerpt,
+                date: node.frontmatter.date,
+                url: site.siteMetadata.siteUrl + node.fields.slug,
+                guid: site.siteMetadata.siteUrl + node.fields.slug,
+                custom_elements: [{ 'content:encoded': node.html }],
+              })),
+          },
+        ],
       },
     },
   ],
