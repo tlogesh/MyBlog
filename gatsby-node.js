@@ -20,6 +20,7 @@ exports.createSchemaCustomization = ({ actions }) => {
       date: Date @dateformat
       description: String
       tags: [String]
+      cover: String
       draft: Boolean
     }
     type Fields {

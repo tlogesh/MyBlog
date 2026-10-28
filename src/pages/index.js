@@ -17,10 +17,10 @@ export default function BlogIndex({ data }) {
           ~/blog
         </p>
         <h1>
-          Notes from the <span className="shimmer">full stack</span>
+          Notes on building, learning and <span className="shimmer">not outsourcing the thinking</span>
         </h1>
         <p className="hero__lead">
-          Writing about building products end to end: frontends, APIs, AI and everything that breaks in between.
+          Field notes on building software, and staying sharp, while AI does more of the typing.
         </p>
       </header>
 
@@ -43,6 +43,16 @@ export default function BlogIndex({ data }) {
         {shown.length === 0 && <p className="muted">First posts are on their way.</p>}
         {shown.map((post, i) => (
           <Link key={post.fields.slug} className="post-card" to={post.fields.slug} style={{ '--i': i }}>
+            <div className="post-card__cover" aria-hidden="true">
+              {post.frontmatter.cover ? (
+                <img src={post.frontmatter.cover} alt="" loading="lazy" />
+              ) : (
+                <span style={{ '--h': (post.frontmatter.title.length * 37) % 360 }}>
+                  {(post.frontmatter.tags || [])[0] || '</>'}
+                </span>
+              )}
+            </div>
+            <div className="post-card__body">
             <p className="post-card__meta">
               <time dateTime={post.frontmatter.isoDate}>{post.frontmatter.date}</time> &middot; {post.timeToRead} min read
             </p>
@@ -55,6 +65,7 @@ export default function BlogIndex({ data }) {
                 ))}
               </p>
             )}
+            </div>
             <span className="post-card__arrow" aria-hidden="true">
               &rarr;
             </span>
@@ -80,6 +91,7 @@ export const query = graphql`
           title
           description
           tags
+          cover
           date(formatString: "MMM D, YYYY")
           isoDate: date
         }

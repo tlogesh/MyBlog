@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" role="img" aria-label="Output rising while understanding stays flat, with the gap shaded as debt">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0f172a"/>
+      <stop offset="1" stop-color="#1e1b4b"/>
+    </linearGradient>
+    <linearGradient id="gap" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#f43f5e" stop-opacity=".55"/>
+      <stop offset="1" stop-color="#f43f5e" stop-opacity=".08"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="500" fill="url(#bg)"/>
+  <g stroke="#94a3b8" stroke-opacity=".12">
+    <path d="M0 100H800M0 200H800M0 300H800M0 400H800"/>
+    <path d="M100 0V500M200 0V500M300 0V500M400 0V500M500 0V500M600 0V500M700 0V500"/>
+  </g>
+  <path d="M90 360 C250 350 400 250 710 90 L710 330 C500 335 300 345 90 360Z" fill="url(#gap)"/>
+  <path d="M90 360 C250 350 400 250 710 90" fill="none" stroke="#38bdf8" stroke-width="6" stroke-linecap="round"/>
+  <path d="M90 360 C300 345 500 335 710 330" fill="none" stroke="#a78bfa" stroke-width="6" stroke-linecap="round" stroke-dasharray="1 14"/>
+  <circle cx="710" cy="90" r="9" fill="#38bdf8"/>
+  <circle cx="710" cy="330" r="9" fill="#a78bfa"/>
+  <g font-family="ui-monospace,Menlo,monospace" font-size="20" fill="#e2e8f0">
+    <text x="560" y="70" fill="#38bdf8">output</text>
+    <text x="520" y="365" fill="#a78bfa">understanding</text>
+    <text x="545" y="215" fill="#fb7185" font-size="22" font-weight="700">debt</text>
+  </g>
+</svg>

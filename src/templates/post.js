@@ -57,11 +57,11 @@ export default function Post({ data }) {
         <div className="prose" ref={body} dangerouslySetInnerHTML={{ __html: post.html }} />
 
         <aside className="post__author">
-          <img src="/img/profile.jpg" alt="" width="56" height="56" />
+          <img src="/img/author.jpg" alt="Logesh Thulasiraman" width="56" height="56" />
           <div>
             <strong>Logesh Thulasiraman</strong>
             <p className="muted">
-              Full-stack engineer. Building with web, mobile and AI. <a href="https://logesht.dev">logesht.dev</a>
+              Principal engineer. Tech enthusiast. Forever tinkering. <a href="https://logesht.dev">logesht.dev</a>
             </p>
           </div>
         </aside>
