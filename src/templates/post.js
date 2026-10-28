@@ -97,6 +97,7 @@ export const Head = ({ data: { post } }) => (
     description={post.frontmatter.description || post.excerpt}
     path={post.fields.slug}
     type="article"
+    image={post.frontmatter.ogImage || post.frontmatter.cover}
   />
 );
 
@@ -113,6 +114,8 @@ export const query = graphql`
         title
         description
         tags
+        cover
+        ogImage
         date(formatString: "MMM D, YYYY")
         isoDate: date
       }

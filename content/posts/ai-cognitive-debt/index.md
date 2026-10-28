@@ -4,6 +4,7 @@ date: 2026-10-28
 description: AI makes us faster today and can quietly make us weaker tomorrow. What cognitive debt is, how to spot it, and what to start and stop doing so AI compounds your skills instead of replacing them.
 tags: [ai, career, engineering]
 cover: /img/covers/cognitive-debt.svg
+ogImage: /img/covers/cognitive-debt-og.png
 ---
 
 Technical debt is the shortcut you take in code that you pay for later, with interest. **Cognitive debt** is the same trade, made in your own head: you skip the thinking now, and you pay for it later in understanding you never built.

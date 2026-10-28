@@ -21,6 +21,7 @@ exports.createSchemaCustomization = ({ actions }) => {
       description: String
       tags: [String]
       cover: String
+      ogImage: String
       draft: Boolean
     }
     type Fields {
