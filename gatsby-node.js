@@ -1,3 +1,4 @@
+const fs = require('fs');
 const path = require('path');
 const { createFilePath } = require('gatsby-source-filesystem');
 
@@ -58,4 +59,36 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
       },
     });
   });
+};
+
+// Machine-readable post list for the portfolio's "Latest writing" section.
+exports.onPostBuild = async ({ graphql, reporter }) => {
+  const result = await graphql(`
+    {
+      site { siteMetadata { siteUrl } }
+      allMarkdownRemark(
+        filter: { frontmatter: { draft: { ne: true } } }
+        sort: { frontmatter: { date: DESC } }
+      ) {
+        nodes {
+          excerpt(pruneLength: 160)
+          fields { slug }
+          frontmatter { title description date(formatString: "YYYY-MM-DD") tags }
+        }
+      }
+    }
+  `);
+  if (result.errors) {
+    reporter.warn('Could not write posts.json');
+    return;
+  }
+  const { siteUrl } = result.data.site.siteMetadata;
+  const posts = result.data.allMarkdownRemark.nodes.map((n) => ({
+    title: n.frontmatter.title,
+    description: n.frontmatter.description || n.excerpt,
+    date: n.frontmatter.date,
+    tags: n.frontmatter.tags || [],
+    url: siteUrl + n.fields.slug,
+  }));
+  fs.writeFileSync(path.join('public', 'posts.json'), JSON.stringify({ posts }));
 };

@@ -2,6 +2,7 @@ import * as React from 'react';
 import { Link, graphql } from 'gatsby';
 import Layout from '../components/layout';
 import Seo from '../components/seo';
+import Engagement from '../components/engagement';
 
 // Adds a copy button to every code block in the post.
 function useCopyButtons(ref) {
@@ -64,6 +65,8 @@ export default function Post({ data }) {
             </p>
           </div>
         </aside>
+
+        <Engagement slug={post.fields.slug} title={post.frontmatter.title} />
 
         <nav className="post-nav" aria-label="More posts">
           {newer ? (

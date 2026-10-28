@@ -704,3 +704,339 @@ main.blog-main {
 .prose pre[class*='language-'] code {
   padding: 0;
 }
+
+/* ---------- Reactions, share and comments ---------- */
+.engagement {
+  margin-top: 40px;
+}
+
+.reactions,
+.share {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px;
+}
+
+.share {
+  margin-top: 16px;
+}
+
+.share__label {
+  font: 500 12px var(--mono);
+  color: var(--fg-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  margin-right: 4px;
+}
+
+.reaction {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 12px;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  background: var(--bg-elev);
+  color: var(--fg);
+  font: 500 14px var(--mono);
+  cursor: pointer;
+  transition: border-color 0.15s, background-color 0.15s, transform 0.1s;
+}
+
+.reaction:hover {
+  border-color: var(--accent);
+}
+
+.reaction:active {
+  transform: scale(0.95);
+}
+
+.reaction.is-on {
+  border-color: var(--accent);
+  background: var(--accent-soft);
+}
+
+.comments {
+  margin-top: 44px;
+}
+
+.comments h2 {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 22px;
+  margin: 0 0 18px;
+}
+
+.comments__count {
+  padding: 1px 10px;
+  border-radius: 999px;
+  background: var(--accent-soft);
+  color: var(--accent);
+  font: 600 13px var(--mono);
+}
+
+.comments__empty {
+  margin: 0 0 24px;
+  padding: 22px;
+  text-align: center;
+  color: var(--fg-muted);
+  border: 1px dashed var(--line);
+  border-radius: var(--radius);
+}
+
+.comment-list {
+  list-style: none;
+  margin: 0 0 28px;
+  padding: 0;
+  display: grid;
+  gap: 14px;
+}
+
+.comment {
+  display: flex;
+  gap: 14px;
+  padding: 18px 20px;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  background: var(--bg-elev);
+  animation: enter 0.5s cubic-bezier(0.2, 0.7, 0.2, 1) both;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.comment:hover {
+  border-color: var(--accent);
+  box-shadow: var(--shadow);
+}
+
+.avatar {
+  flex: none;
+  display: grid;
+  place-items: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: hsl(var(--hue) 55% 45% / 0.16);
+  color: hsl(var(--hue) 60% 42%);
+  font: 700 16px var(--sans);
+}
+
+:root[data-theme='dark'] .avatar {
+  color: hsl(var(--hue) 70% 70%);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme='light']) .avatar {
+    color: hsl(var(--hue) 70% 70%);
+  }
+}
+
+.comment__main {
+  min-width: 0;
+  flex: 1;
+}
+
+.comment__meta {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 4px 10px;
+  margin: 0 0 4px;
+  font: 500 12.5px var(--mono);
+  color: var(--fg-muted);
+}
+
+.comment__meta strong {
+  color: var(--fg);
+  font: 600 15px var(--sans);
+}
+
+.comment__body {
+  margin: 0;
+  font-size: 16px;
+  white-space: pre-wrap;
+  overflow-wrap: anywhere;
+}
+
+.comment-form {
+  display: grid;
+  gap: 16px;
+  padding: 22px 24px;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  background: var(--bg-elev);
+}
+
+.comment-form h3 {
+  margin: 0;
+  font-size: 18px;
+}
+
+.comment-form label {
+  position: relative;
+  display: grid;
+  gap: 6px;
+  font: 500 12.5px var(--mono);
+  color: var(--fg-muted);
+}
+
+.comment-form input,
+.comment-form textarea {
+  padding: 11px 14px;
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  background: var(--bg);
+  color: var(--fg);
+  font: 400 16px/1.5 var(--sans);
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.comment-form input::placeholder,
+.comment-form textarea::placeholder {
+  color: var(--fg-muted);
+  opacity: 0.7;
+}
+
+.comment-form input:focus,
+.comment-form textarea:focus {
+  outline: none;
+  border-color: var(--accent);
+  box-shadow: 0 0 0 3px var(--accent-soft);
+}
+
+.comment-form textarea {
+  resize: vertical;
+  min-height: 110px;
+}
+
+.comment-form__count {
+  position: absolute;
+  right: 10px;
+  bottom: 8px;
+  font: 500 11px var(--mono);
+  color: var(--fg-muted);
+  pointer-events: none;
+}
+
+.comment-form .hp {
+  position: absolute;
+  left: -9999px;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}
+
+.comment-form__row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 10px 16px;
+}
+
+.comment-form__hint {
+  margin: 0;
+  font-size: 13px;
+}
+
+.comment-form__status {
+  margin: 0;
+  padding: 10px 14px;
+  border-radius: 10px;
+  font-size: 14.5px;
+}
+
+.comment-form__status.is-ok {
+  color: var(--accent);
+  background: var(--accent-soft);
+}
+
+.comment-form__status.is-error {
+  color: #d64545;
+  background: rgba(214, 69, 69, 0.1);
+}
+
+.btn {
+  padding: 10px 20px;
+  border: 1px solid var(--accent);
+  border-radius: 999px;
+  background: var(--accent);
+  color: #04130d;
+  font: 600 14px var(--sans);
+  cursor: pointer;
+  transition: transform 0.15s, box-shadow 0.2s, opacity 0.2s;
+}
+
+.btn:hover:not(:disabled) {
+  transform: translateY(-1px);
+  box-shadow: var(--shadow);
+}
+
+.btn:disabled {
+  opacity: 0.6;
+  cursor: progress;
+}
+
+.badge {
+  padding: 1px 8px;
+  border-radius: 999px;
+  border: 1px solid var(--line);
+  font: 500 11px var(--mono);
+}
+
+.badge.is-pending {
+  color: var(--warn);
+  border-color: var(--warn);
+}
+
+.badge.is-approved {
+  color: var(--accent);
+  border-color: var(--accent);
+}
+
+.admin-actions {
+  display: flex;
+  gap: 8px;
+  margin: 10px 0 0;
+}
+
+.admin-actions .chip {
+  cursor: pointer;
+}
+
+@media (max-width: 640px) {
+  .comment {
+    padding: 14px;
+    gap: 10px;
+  }
+  .comment-form {
+    padding: 18px 16px;
+  }
+}
+
+.share__btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 38px;
+  height: 38px;
+  padding: 0;
+  border: 1px solid var(--line);
+  border-radius: 50%;
+  background: var(--bg-elev);
+  color: var(--fg-muted);
+  cursor: pointer;
+  transition: border-color 0.15s, color 0.15s, background-color 0.15s;
+}
+
+.share__btn svg {
+  width: 17px;
+  height: 17px;
+}
+
+.share__btn:hover,
+.share__btn.is-on {
+  border-color: var(--accent);
+  color: var(--accent);
+  background: var(--accent-soft);
+}

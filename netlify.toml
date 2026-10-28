@@ -4,3 +4,20 @@
 
 [build.environment]
   NODE_VERSION = "22"
+
+[functions]
+  directory = "netlify/functions"
+  node_bundler = "esbuild"
+
+# Local: `npm run build` then `npm run dev:functions` serves the built site plus the functions.
+[dev]
+  framework = "#static"
+  publish = "public"
+  port = 8888
+
+# Public post list the portfolio (logesht.dev) reads for its "Latest writing" section.
+[[headers]]
+  for = "/posts.json"
+  [headers.values]
+    Access-Control-Allow-Origin = "*"
+    Cache-Control = "public, max-age=300"

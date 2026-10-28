@@ -9,12 +9,14 @@
     "start": "gatsby develop",
     "build": "gatsby build",
     "serve": "gatsby serve",
-    "clean": "gatsby clean"
+    "clean": "gatsby clean",
+    "dev:functions": "netlify dev"
   },
   "engines": {
     "node": ">=18"
   },
   "dependencies": {
+    "@netlify/blobs": "^8.1.0",
     "gatsby": "5.16.1",
     "gatsby-plugin-feed": "5.16.0",
     "gatsby-plugin-sitemap": "6.16.0",
@@ -25,5 +27,8 @@
     "prismjs": "1.30.0",
     "react": "18.3.1",
     "react-dom": "18.3.1"
+  },
+  "devDependencies": {
+    "netlify-cli": "^23.15.1"
   }
 }
