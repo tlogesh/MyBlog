@@ -1,0 +1,137 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 670" role="img" aria-label="A continuous loop with six steps in clockwise order, each with an icon: intent (target), generate (sparkle), verify (shield with a check), verdict (scales), release (upward arrow) and observe (eye), then back to intent. Intent, verdict and observe are human-led; generate, verify and release are largely automated.">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0b1020"/>
+      <stop offset="1" stop-color="#1e1b4b"/>
+    </linearGradient>
+    <linearGradient id="ring" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#a78bfa"/>
+      <stop offset=".5" stop-color="#38bdf8"/>
+      <stop offset="1" stop-color="#a78bfa"/>
+    </linearGradient>
+    <radialGradient id="core" cx="50%" cy="50%" r="50%">
+      <stop offset="0" stop-color="#6366f1" stop-opacity=".28"/>
+      <stop offset="1" stop-color="#6366f1" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="blur" x="-60%" y="-60%" width="220%" height="220%">
+      <feGaussianBlur stdDeviation="11"/>
+    </filter>
+  </defs>
+
+  <rect width="760" height="670" rx="20" fill="url(#bg)"/>
+  <g stroke="#94a3b8" stroke-opacity=".07">
+    <path d="M0 110H760M0 220H760M0 330H760M0 440H760M0 550H760"/>
+    <path d="M110 0V670M220 0V670M330 0V670M440 0V670M550 0V670M660 0V670"/>
+  </g>
+  <circle cx="380" cy="340" r="190" fill="url(#core)"/>
+
+  <!-- the loop -->
+  <circle cx="380" cy="340" r="215" fill="none" stroke="url(#ring)" stroke-opacity=".28" stroke-width="14"/>
+  <circle cx="380" cy="340" r="215" fill="none" stroke="url(#ring)" stroke-width="3.5" stroke-dasharray="2 11" stroke-linecap="round"/>
+
+  <!-- clockwise direction arrows -->
+  <g fill="#e2e8f0">
+    <path d="M0-12L11 8L-11 8Z" transform="translate(487.5 153.8) rotate(120)"/>
+    <path d="M0-12L11 8L-11 8Z" transform="translate(595 340) rotate(180)"/>
+    <path d="M0-12L11 8L-11 8Z" transform="translate(487.5 526.2) rotate(240)"/>
+    <path d="M0-12L11 8L-11 8Z" transform="translate(272.5 526.2) rotate(300)"/>
+    <path d="M0-12L11 8L-11 8Z" transform="translate(165 340) rotate(360)"/>
+    <path d="M0-12L11 8L-11 8Z" transform="translate(272.5 153.8) rotate(60)"/>
+  </g>
+
+  <!-- centre -->
+  <g font-family="ui-monospace,Menlo,monospace" text-anchor="middle">
+    <text x="380" y="332" font-size="34" fill="#f1f5f9" font-weight="700" letter-spacing="4">THE LOOP</text>
+    <text x="380" y="362" font-size="16" fill="#aab4c5">every change, every time</text>
+    <g font-size="15" fill="#cbd5e1" text-anchor="start">
+      <circle cx="318" cy="404" r="8" fill="#a78bfa"/>
+      <text x="334" y="409">human-led</text>
+      <circle cx="318" cy="432" r="8" fill="#38bdf8"/>
+      <text x="334" y="437">automated</text>
+    </g>
+  </g>
+
+  <!-- node glows -->
+  <g opacity=".55" filter="url(#blur)">
+    <circle cx="380" cy="125" r="46" fill="#a78bfa"/>
+    <circle cx="566.2" cy="232.5" r="46" fill="#38bdf8"/>
+    <circle cx="566.2" cy="447.5" r="46" fill="#38bdf8"/>
+    <circle cx="380" cy="555" r="46" fill="#a78bfa"/>
+    <circle cx="193.8" cy="447.5" r="46" fill="#38bdf8"/>
+    <circle cx="193.8" cy="232.5" r="46" fill="#a78bfa"/>
+  </g>
+
+  <!-- node discs -->
+  <g stroke-width="3.5">
+    <circle cx="380" cy="125" r="48" fill="#171436"/><circle cx="380" cy="125" r="48" fill="#a78bfa" fill-opacity=".25" stroke="#a78bfa"/>
+    <circle cx="566.2" cy="232.5" r="48" fill="#171436"/><circle cx="566.2" cy="232.5" r="48" fill="#38bdf8" fill-opacity=".22" stroke="#38bdf8"/>
+    <circle cx="566.2" cy="447.5" r="48" fill="#171436"/><circle cx="566.2" cy="447.5" r="48" fill="#38bdf8" fill-opacity=".22" stroke="#38bdf8"/>
+    <circle cx="380" cy="555" r="48" fill="#171436"/><circle cx="380" cy="555" r="48" fill="#a78bfa" fill-opacity=".25" stroke="#a78bfa"/>
+    <circle cx="193.8" cy="447.5" r="48" fill="#171436"/><circle cx="193.8" cy="447.5" r="48" fill="#38bdf8" fill-opacity=".22" stroke="#38bdf8"/>
+    <circle cx="193.8" cy="232.5" r="48" fill="#171436"/><circle cx="193.8" cy="232.5" r="48" fill="#a78bfa" fill-opacity=".25" stroke="#a78bfa"/>
+  </g>
+
+  <!-- icons -->
+  <g fill="none" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round">
+    <!-- 1 intent: target -->
+    <g transform="translate(380 125)" stroke="#e9e3ff">
+      <circle r="19"/><circle r="10"/><circle r="2.5" fill="#e9e3ff"/>
+    </g>
+    <!-- 2 generate: sparkle -->
+    <g transform="translate(566.2 232.5)" stroke="#dff4ff">
+      <path d="M0-20C2-8 8-2 20 0C8 2 2 8 0 20C-2 8-8 2-20 0C-8-2-2-8 0-20Z"/>
+      <path d="M15-18V-10M11-14H19" />
+    </g>
+    <!-- 3 verify: shield + check -->
+    <g transform="translate(566.2 447.5)" stroke="#dff4ff">
+      <path d="M0-20L17-13V3C17 12 9 18 0 22C-9 18-17 12-17 3V-13Z"/>
+      <path d="M-7 2L-2 7L8-6"/>
+    </g>
+    <!-- 4 verdict: scales -->
+    <g transform="translate(380 555)" stroke="#e9e3ff">
+      <path d="M0-20V18M-10 20H10M-17-11H17"/>
+      <path d="M-17-11L-23 3H-11Z M17-11L11 3H23Z"/>
+    </g>
+    <!-- 5 release: arrow up -->
+    <g transform="translate(193.8 447.5)" stroke="#dff4ff">
+      <path d="M0 14V-18M-11-7L0-18L11-7M-17 20H17"/>
+    </g>
+    <!-- 6 observe: eye -->
+    <g transform="translate(193.8 232.5)" stroke="#e9e3ff">
+      <path d="M-22 0C-12-14 12-14 22 0C12 14-12 14-22 0Z"/>
+      <circle r="6"/>
+    </g>
+  </g>
+
+  <!-- step numbers -->
+  <g font-family="ui-monospace,Menlo,monospace" font-size="14" font-weight="700" text-anchor="middle">
+    <circle cx="346" cy="91" r="13" fill="#a78bfa"/><text x="346" y="96" fill="#171436">1</text>
+    <circle cx="532" cy="198" r="13" fill="#38bdf8"/><text x="532" y="203" fill="#0b1020">2</text>
+    <circle cx="532" cy="413" r="13" fill="#38bdf8"/><text x="532" y="418" fill="#0b1020">3</text>
+    <circle cx="346" cy="521" r="13" fill="#a78bfa"/><text x="346" y="526" fill="#171436">4</text>
+    <circle cx="160" cy="413" r="13" fill="#38bdf8"/><text x="160" y="418" fill="#0b1020">5</text>
+    <circle cx="160" cy="198" r="13" fill="#a78bfa"/><text x="160" y="203" fill="#171436">6</text>
+  </g>
+
+  <!-- labels -->
+  <g font-family="ui-monospace,Menlo,monospace">
+    <g text-anchor="middle">
+      <text x="380" y="40" font-size="22" fill="#f1f5f9" font-weight="700">Intent</text>
+      <text x="380" y="60" font-size="14" fill="#aab4c5">what and why</text>
+      <text x="380" y="637" font-size="22" fill="#f1f5f9" font-weight="700">Verdict</text>
+      <text x="380" y="657" font-size="14" fill="#aab4c5">decide on risk</text>
+    </g>
+    <g text-anchor="start">
+      <text x="624" y="232" font-size="22" fill="#f1f5f9" font-weight="700">Generate</text>
+      <text x="624" y="253" font-size="14" fill="#aab4c5">agent or human</text>
+      <text x="624" y="447" font-size="22" fill="#f1f5f9" font-weight="700">Verify</text>
+      <text x="624" y="468" font-size="14" fill="#aab4c5">tests, checks</text>
+    </g>
+    <g text-anchor="end">
+      <text x="136" y="447" font-size="22" fill="#f1f5f9" font-weight="700">Release</text>
+      <text x="136" y="468" font-size="14" fill="#aab4c5">flags, rollback</text>
+      <text x="136" y="232" font-size="22" fill="#f1f5f9" font-weight="700">Observe</text>
+      <text x="136" y="253" font-size="14" fill="#aab4c5">behaviour, cost</text>
+    </g>
+  </g>
+</svg>

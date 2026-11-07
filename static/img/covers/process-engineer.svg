@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" role="img" aria-label="A loop of six steps with icons: intent, generate, verify, verdict, release and observe, beside the words code is cheap, the process is the job">
+<defs>
+<linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#0b1020"/><stop offset="1" stop-color="#1e1b4b"/></linearGradient>
+<linearGradient id="ring" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#a78bfa"/><stop offset=".5" stop-color="#38bdf8"/><stop offset="1" stop-color="#a78bfa"/></linearGradient>
+<radialGradient id="core" cx="50%" cy="50%" r="50%"><stop offset="0" stop-color="#6366f1" stop-opacity=".30"/><stop offset="1" stop-color="#6366f1" stop-opacity="0"/></radialGradient>
+<filter id="blur" x="-60%" y="-60%" width="220%" height="220%"><feGaussianBlur stdDeviation="10"/></filter>
+</defs>
+<rect width="800" height="500" fill="url(#bg)"/>
+<g stroke="#94a3b8" stroke-opacity=".07"><path d="M100 0V500M200 0V500M300 0V500M400 0V500M500 0V500M600 0V500M700 0V500M0 100H800M0 200H800M0 300H800M0 400H800"/></g>
+<circle cx="590" cy="250" r="135" fill="url(#core)"/>
+<circle cx="590" cy="250" r="150" fill="none" stroke="url(#ring)" stroke-opacity=".28" stroke-width="10.1"/>
+<circle cx="590" cy="250" r="150" fill="none" stroke="url(#ring)" stroke-width="3" stroke-dasharray="2 10" stroke-linecap="round"/>
+<path d="M0-12L11 8L-11 8Z" fill="#e2e8f0" transform="translate(665.0 120.1) rotate(120) scale(0.76)"/>
+<path d="M0-12L11 8L-11 8Z" fill="#e2e8f0" transform="translate(740.0 250.0) rotate(180) scale(0.76)"/>
+<path d="M0-12L11 8L-11 8Z" fill="#e2e8f0" transform="translate(665.0 379.9) rotate(240) scale(0.76)"/>
+<path d="M0-12L11 8L-11 8Z" fill="#e2e8f0" transform="translate(515.0 379.9) rotate(300) scale(0.76)"/>
+<path d="M0-12L11 8L-11 8Z" fill="#e2e8f0" transform="translate(440.0 250.0) rotate(360) scale(0.76)"/>
+<path d="M0-12L11 8L-11 8Z" fill="#e2e8f0" transform="translate(515.0 120.1) rotate(420) scale(0.76)"/>
+<g opacity=".55" filter="url(#blur)">
+<circle cx="590.0" cy="100.0" r="34" fill="#a78bfa"/>
+<circle cx="719.9" cy="175.0" r="34" fill="#38bdf8"/>
+<circle cx="719.9" cy="325.0" r="34" fill="#38bdf8"/>
+<circle cx="590.0" cy="400.0" r="34" fill="#a78bfa"/>
+<circle cx="460.1" cy="325.0" r="34" fill="#38bdf8"/>
+<circle cx="460.1" cy="175.0" r="34" fill="#a78bfa"/>
+</g>
+<circle cx="590.0" cy="100.0" r="36" fill="#171436"/><circle cx="590.0" cy="100.0" r="36" fill="#a78bfa" fill-opacity=".25" stroke="#a78bfa" stroke-width="3.5"/>
+<circle cx="719.9" cy="175.0" r="36" fill="#171436"/><circle cx="719.9" cy="175.0" r="36" fill="#38bdf8" fill-opacity=".22" stroke="#38bdf8" stroke-width="3.5"/>
+<circle cx="719.9" cy="325.0" r="36" fill="#171436"/><circle cx="719.9" cy="325.0" r="36" fill="#38bdf8" fill-opacity=".22" stroke="#38bdf8" stroke-width="3.5"/>
+<circle cx="590.0" cy="400.0" r="36" fill="#171436"/><circle cx="590.0" cy="400.0" r="36" fill="#a78bfa" fill-opacity=".25" stroke="#a78bfa" stroke-width="3.5"/>
+<circle cx="460.1" cy="325.0" r="36" fill="#171436"/><circle cx="460.1" cy="325.0" r="36" fill="#38bdf8" fill-opacity=".22" stroke="#38bdf8" stroke-width="3.5"/>
+<circle cx="460.1" cy="175.0" r="36" fill="#171436"/><circle cx="460.1" cy="175.0" r="36" fill="#a78bfa" fill-opacity=".25" stroke="#a78bfa" stroke-width="3.5"/>
+<g transform="translate(590.0 100.0) scale(0.75)" fill="none" stroke="#e9e3ff" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"><circle r="19"/><circle r="10"/><circle r="2.5" fill="#e9e3ff"/></g>
+<g transform="translate(719.9 175.0) scale(0.75)" fill="none" stroke="#dff4ff" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"><path d="M0-20C2-8 8-2 20 0C8 2 2 8 0 20C-2 8-8 2-20 0C-8-2-2-8 0-20Z"/><path d="M15-18V-10M11-14H19"/></g>
+<g transform="translate(719.9 325.0) scale(0.75)" fill="none" stroke="#dff4ff" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"><path d="M0-20L17-13V3C17 12 9 18 0 22C-9 18-17 12-17 3V-13Z"/><path d="M-7 2L-2 7L8-6"/></g>
+<g transform="translate(590.0 400.0) scale(0.75)" fill="none" stroke="#e9e3ff" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"><path d="M0-20V18M-10 20H10M-17-11H17"/><path d="M-17-11L-23 3H-11Z M17-11L11 3H23Z"/></g>
+<g transform="translate(460.1 325.0) scale(0.75)" fill="none" stroke="#dff4ff" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"><path d="M0 14V-18M-11-7L0-18L11-7M-17 20H17"/></g>
+<g transform="translate(460.1 175.0) scale(0.75)" fill="none" stroke="#e9e3ff" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"><path d="M-22 0C-12-14 12-14 22 0C12 14-12 14-22 0Z"/><circle r="6"/></g>
+<g font-family="ui-monospace,Menlo,SFMono-Regular,Consolas,monospace">
+<text x="44" y="190" font-size="40" font-weight="700" fill="#f1f5f9">Code is</text>
+<text x="44" y="238" font-size="40" font-weight="700" fill="#f1f5f9">cheap.</text>
+<text x="44" y="298" font-size="30" font-weight="700" fill="#a78bfa">The process</text>
+<text x="44" y="338" font-size="30" font-weight="700" fill="#a78bfa">is the job.</text>
+</g>
+</svg>
