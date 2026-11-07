@@ -31,7 +31,8 @@ export default function Seo({ title, description, path = '/', type = 'website', 
         rel="icon"
         href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='7' fill='%230b0f17'/><text x='6' y='22' font-family='monospace' font-size='16' font-weight='700' fill='%2334d399'>&gt;_</text></svg>"
       />
-      <meta property="og:title" content={fullTitle} />
+      <meta property="og:title" content={title || meta.title} />
+      <meta name="twitter:title" content={title || meta.title} />
       <meta property="og:description" content={desc} />
       <meta property="og:type" content={type} />
       <meta property="og:url" content={url} />
