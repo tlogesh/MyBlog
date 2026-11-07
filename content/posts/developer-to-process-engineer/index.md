@@ -96,6 +96,8 @@ The last row matters more than it looks. Judging evidence depends on understandi
 
 ## Closing thought
 
-Typing was never the job. Judgement was, and generated code makes that plain. The engineers who thrive will be the ones who design the process, frame the problem well, shape the work, prove it is safe and take responsibility for what ships.
+The line of code was never really the point. It was the visible proof of something less visible: judgement about what to build, how to make it safe, and when to let it go.
+
+Now that code is cheap, that judgement is simply the job, laid bare. The engineers who thrive will be the ones who frame the problem well, design the gates, read the evidence, and stand behind what ships.
 
 > Generation is cheap. Trust is the product.
